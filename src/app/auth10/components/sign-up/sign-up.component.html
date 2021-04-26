@@ -1,0 +1,46 @@
+
+         <div class="wrapper fadeInDown">
+          <div id="formContent">
+    
+            <form autocomplete="off" [formGroup]="formAdmin" (ngSubmit)="onSubmit(formAdmin.value)" >
+
+            <div class="form-group">
+              <input type="email" formControlName="email" class="formControl" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email" #userName required>
+            </div>
+    
+      
+            <div class="formGroup">
+              <input type="password" formControlName= "password" class="formControl" placeholder="Password" #userPassword required>
+            </div>
+
+            <div class="formGroup">
+              <input type="text" class="formControl" formControlName= "servicio" placeholder="Servicio" #servicio  required>  <div class="tooltip-wrap">
+                <i class="far fa-question-circle"></i>
+                <div class="tooltip-content">
+                  <p>Servicio: Nefrología, Cardiología, Urgencias....</p>
+                </div> 
+              </div>
+            </div>
+           
+
+      
+            <!-- Calling SignIn Api from AuthService -->
+            <div class="formGroup">
+              <input type="submit" id="button" class="btn btnPrimary" value="Acceder">
+            </div>
+            </form>
+
+
+            <div id="formFooter">
+            <div class="redirectToLogin">
+              <span>¿Ya tienes una cuenta? </span><a class="underlineHover" routerLink="/sign-in">Acceder</a>
+            </div>
+          </div>
+
+
+      </div>
+  
+      
+    </div>
+  
+ 

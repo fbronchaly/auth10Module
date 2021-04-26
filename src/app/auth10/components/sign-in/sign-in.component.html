@@ -1,0 +1,47 @@
+
+  
+
+       
+
+        <div class="wrapper fadeInDown">
+          <div id="formContent">
+            <form autocomplete="off" [formGroup]="formAdmin" (ngSubmit)="onSubmit(formAdmin.value)" >
+
+        <div class="form-group">
+          <input type="email" autocomplete="username email" class="formControl" formControlName="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email" #userName required pattern=".*\w+\s+\w+\.*">
+        </div>
+
+  
+        <div class="formGroup">
+          <input type="password" autocomplete="new-password" class="formControl"  formControlName="password" placeholder="Password" #userPassword required>
+        </div>
+  
+        <!-- Calling SignIn Api from AuthService -->
+        <div class="formGroup">
+          <input type="submit" id="button" class="btn btnPrimary" value="Acceder">
+        </div>
+  
+      </form>
+
+                <!-- Remind Passowrd -->
+    <div id="formFooter">
+      <a class="underlineHover" routerLink="/forgot-password">Olvidó su password?</a>
+    
+        <div class="redirectToLogin">
+          <span>No tiene cuenta?</span><a class="underlineHover" [routerLink]="['/sing-up']"> Dar de alta servicio</a>
+        </div>
+
+        </div>
+    
+  
+      </div>
+    </div>
+
+    
+  
+
+  
+     
+
+
+
